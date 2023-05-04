@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora de suma</title>
+</head>
+<body>
+	<h1>Calculadora de suma</h1>
+	<form>
+		<label for="num1">Primer número:</label>
+		<input type="number" id="num1" name="num1"><br><br>
+		<label for="num2">Segundo número:</label>
+		<input type="number" id="num2" name="num2"><br><br>
+		<input type="button" value="Calcular suma" onclick="sumar()">
+	</form>
+	<p>La suma es: <span id="resultado"></span></p>
+	<script>
+		function sumar() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var resultado = num1 + num2;
+			document.getElementById("resultado").innerHTML = resultado;
+		}
+	</script>
+</body>
+</html>
